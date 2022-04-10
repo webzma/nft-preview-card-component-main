@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+	/* PRIMARY COLORS */
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);	
+
+	/* NEUTRAL COLOR* */
+	--very-dark-blue-main: hsl(217, 54%, 11%);
+	--very-dark-blue-card: hsl(216, 50%, 16%);
+	--very-dark-blue-line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+
+	/* FONT SIZE PARAGRAPH */
+	--font-size-p: 18px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--very-dark-blue-main);
+	min-width: 320px;
+	max-width: 1440px;
+	display: grid;
+	place-items: center;
+	font-family: "Outfit", sans-serif;
+}
+
+.container {
+	border-radius: 15px;
+	width: 330px;
+	margin: auto;
+	background-color: var(--very-dark-blue-card);
+	padding: 25px;
+}
+
+.card .image-equilibrium {
+	width: 100%;
+	height: 285px;
+	border-radius: 15px;
+	object-fit: cover;
+	background-image: url(../images/image-equilibrium.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.fondo-equilibrium {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 255, 247, .5);
+	display: none;
+	border-radius: 15px;
+}
+
+.card .image-equilibrium:hover .fondo-equilibrium {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+h3 {
+	margin-top: 20px;
+	color: var(--white);
+	font-size: 22px;
+}
+
+h3:hover, h3:hover a {
+	cursor: pointer;
+	color: var(--cyan);
+}
+
+h3 a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.description {
+	margin-top: 20px;
+	font-size: var(--font-size-p);
+	color: var(--white);
+	font-weight: 300;
+	color: var(--soft-blue);
+}
+
+.container-info {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+.container-info > div:first-child {
+	display: flex;
+	align-items: center;
+}
+
+.container-info > div:last-child {
+	display: flex;
+	align-items: center;
+}
+
+.container-info > div:first-child span {
+	color: var(--cyan);
+	margin-left: 5px;
+}
+
+.container-info > div:last-child span {
+	color: var(--soft-blue);
+	margin-left: 5px;
+}
+
+.container-user {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.container-user .avatar {
+	width: 40px;
+	margin-right: 15px;
+	border: 1px solid var(--white);
+	border-radius: 50%;
+}
+
+.container-user p {
+	color: var(--soft-blue);
+}
+
+.container-user p a {
+	color: var(--white);
+	text-decoration: none;
+}
+
+.container-user p a:hover {
+	color: var(--cyan);
+}
